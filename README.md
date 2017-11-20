@@ -1,0 +1,2 @@
+# Projeto-Minha-Instituicao
+O projeto da disciplina Linguagem de Programação 2 (do curso de Computação - UEPB), consiste em implementar uma aplicação em Java utilizando os conceitos de Orientação a Objeto. A aplicação deve simular o funcionamento de uma instituição de ensino, cujos atores principais são Alunos e Professores. É proposto que a instituição criada ofereça serviços como criar turma, matricular aluno, atribuir notas aos alunos, dentre outros.
