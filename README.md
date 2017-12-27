@@ -63,9 +63,8 @@ Esses três formam um padrão arquitetural chamado de MVC, ou Model View Control
 
 ## Views
 
-- package <strong>membros</strong> 
--- class <strong>Alunos</strong> extends javax.swing.JInternalFrame
--- class <strong>Professores</strong> extends javax.swing.JInternalFrame
+- [package <strong>membros</strong>]: class <strong>Alunos</strong> extends javax.swing.JInternalFrame
+- [package <strong>membros</strong>]: class <strong>Professores</strong> extends javax.swing.JInternalFrame
 - class <strong>Creditos</strong> extends javax.swing.JInternalFrame
 - class <strong>Disciplinas</strong> extends javax.swing.JInternalFrame 
 - class <strong>HistoricoAluno</strong> extends javax.swing.JInternalFrame 
