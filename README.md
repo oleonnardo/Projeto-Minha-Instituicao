@@ -1,8 +1,10 @@
-<p align="center">Projeto Minha Instituição</p>
+<h2 align="center">Projeto Minha Instituição</h2>
 
-> Professor: Danilo Abreu
-> Linguagem de Programação II
-> Leonardo Araujo Silva
+<p align="center">
+> Professor: Danilo Abreu<br>
+> Linguagem de Programação II<br>
+> Leonardo Araujo Silva<br>
+</p>
 
 ## Sobre o Projeto
 
