@@ -4,6 +4,8 @@
 Professor: Danilo Abreu<br>
 Linguagem de Programação II<br>
 Leonardo Araujo Silva<br>
+<br>
+Link da apresentação do projeto: <a href="https://www.youtube.com/watch?v=frSW4VJRiAY" target="_blank">clique aqui</a>
 </p>
 
 ## Sobre o Projeto
