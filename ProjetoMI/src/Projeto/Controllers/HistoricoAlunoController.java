@@ -24,7 +24,10 @@ public class HistoricoAlunoController implements Controllers{
     
     @Override
     public void store(String[] dados){
-        //int id_turma_aluno, String professor, String disciplina, int id_aluno, int id_turma, double nota1, double nota2, double nota3, double media, int id_status
+        /*
+            int id_turma_aluno, String professor, String disciplina, int id_aluno, 
+            int id_turma, double nota1, double nota2, double nota3, double media, int id_status
+        */
         HistoricoAluno model = new HistoricoAluno( 
             Integer.valueOf(dados[0]), // id_turma_aluno
             dados[1].toUpperCase(), // professor (Historico)
@@ -42,8 +45,8 @@ public class HistoricoAlunoController implements Controllers{
     
     public HistoricoAluno search(int id){
         for (int i = 0; i < index().size(); i++) {
-            if( historico_aluno.get(i).getIdTurmaAluno() == id ) // SE ENCONTROU O REGISTRO DA MATRICULA
-                return historico_aluno.get(i); // ELE RETORNA DADOS DA POSIÇÃO
+            if( historico_aluno.get(i).getIdTurmaAluno() == id ) 
+                return historico_aluno.get(i); 
         }
         return null;
     }
@@ -51,8 +54,7 @@ public class HistoricoAlunoController implements Controllers{
     @Override
     public void update(String[] dados, int id){
         for (int i = 0; i < index().size(); i++) {
-            if( historico_aluno.get(i).getIdTurmaAluno() == id ){// SE ENCONTROU O REGISTRO DA MATRICULA
-                // ELE ATUALIZA A POSIÇÃO
+            if( historico_aluno.get(i).getIdTurmaAluno() == id ){
                 historico_aluno.get(i).setIdTurmaAluno(Integer.valueOf(dados[0]));
                 historico_aluno.get(i).setProfessor(dados[1].toUpperCase());
                 historico_aluno.get(i).setDisciplina(dados[2].toUpperCase());
@@ -70,8 +72,8 @@ public class HistoricoAlunoController implements Controllers{
     @Override
     public void delete(int id){
         for (int i = 0; i < index().size(); i++) {
-            if( historico_aluno.get(i).getIdTurmaAluno() == id ) // SE ENCONTROU O REGISTRO DA MATRICULA
-                historico_aluno.remove(i); // ELE REMOVE AQUELA POSIÇÃO
+            if( historico_aluno.get(i).getIdTurmaAluno() == id ) 
+                historico_aluno.remove(i);
         }
     }
     
@@ -95,16 +97,18 @@ public class HistoricoAlunoController implements Controllers{
             if(matriculaAluno == index().get(i).getIdAluno() && 
                 disciplina.equals(index().get(i).getDisciplina())){ 
                 
-                // verifica se a média do aluno é inferior a media mínima
+                /*
+                    verifica se a média do aluno é inferior a media mínima
+                */
                 status = (index().get(i).getMedia() < RequisitosFuncionais.mediaMinima) ? true : false;
                 
-                /*  se o aluno tiver o status de "Reprovado" ou "Desistente",
-                    o registro de historico e removido e um novo historico é criado para o mesmo  */
+                /*  
+                    se o aluno tiver o status de "Reprovado" ou "Desistente",
+                    o registro de historico e removido e um novo historico é criado para o mesmo  
+                */
                 if(index().get(i).getIdStatus() == 1 || index().get(i).getIdStatus() == 2) index().remove(i);
-                   
-               
-                return status;
                 
+                return status;
             }
         }
         return status;

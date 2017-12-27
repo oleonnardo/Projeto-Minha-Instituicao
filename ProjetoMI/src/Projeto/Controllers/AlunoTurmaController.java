@@ -52,15 +52,15 @@ public class AlunoTurmaController{
     
     public void delete(int id){
         for (int i = 0; i < index().size(); i++) {
-            if( aluno_turmas.get(i).getId() == id ) // SE ENCONTROU O REGISTRO DA MATRICULA
-                aluno_turmas.remove(i); // ELE REMOVE AQUELA POSIÇÃO
+            if( aluno_turmas.get(i).getId() == id )
+                aluno_turmas.remove(i); 
         }
     }
     
     public boolean buscaAluno(int idTurma, int idAluno){
         for (int i = 0; i < index().size(); i++) {
-            if( aluno_turmas.get(i).getIdTurma() == idTurma ) // SE ENCONTROU A TURMA SELECIONADA
-                if(aluno_turmas.get(i).getMatriculaAluno() == idAluno) // VERIRICA SE A MATRICULA ALUNO DAQUELA POSIÇÃO É A MESMA
+            if( aluno_turmas.get(i).getIdTurma() == idTurma ) 
+                if(aluno_turmas.get(i).getMatriculaAluno() == idAluno)
                     return false;
         }
         return true;        
